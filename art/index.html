@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            body{
+            margin:0;
+            }
+            #checkers{
+            width:100%;
+            height:100%;
+            }
+            
+            .checklayers{
+            background:
+            
+            linear-gradient(#0000, #00f6 100%),
+            
+            repeating-conic-gradient(hsl(70, 100%, 50%) 0 25%, #0000 0% 50%),
+            repeating-conic-gradient(hsl(85, 100%, 40%) 0 25%, #0000 0% 50%),
+            repeating-conic-gradient(hsl(100, 100%, 30%) 0 25%, #0000 0% 50%),
+            repeating-conic-gradient(hsl(115, 100%, 20%) 0 25%, #0000 0% 50%),
+            repeating-conic-gradient(hsl(130, 100%, 10%) 0 25%, #0000 0% 50%),
+            
+            linear-gradient(#000, #000);
+            
+            background-size:
+            100px 100%,
+            250px 250px,
+            200px 200px,
+            150px 150px,
+            100px 100px,
+            50px 50px;
+            
+            animation: zoomy 6s ease-in-out alternate infinite, zoomx 4s -1s ease-in-out alternate infinite;
+            }
+            
+            @keyframes zoomx{
+            0%{
+            background-position-x: 0
+            }
+            
+            to{
+            background-position-x: 0, 1500px, 1200px, 900px, 600px, 300px, 0
+            }
+            }
+            
+            @keyframes zoomy{
+            0%{
+            background-position-y: 0
+            }
+            
+            to{
+            background-position-y: 0, 1000px, 800px, 600px, 400px, 200px, 0
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="checklayers" id="checkers"></div>
+    </body>
+</html>
