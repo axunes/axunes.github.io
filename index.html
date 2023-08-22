@@ -128,7 +128,7 @@
         hsl(216, 100%, 75%),
         hsl(288, 100%, 75%),
         hsl(360, 100%, 75%)
-        ) 0/400% 400%;
+        ) 0 / 400%;
         
         animation: rainbow-scroll 5s linear infinite;
         width: 100%;
@@ -142,7 +142,10 @@
     }
 
     @keyframes rainbow-scroll {
-        to{
+        from {
+            background-position-x: 0%;
+        }
+        to {
             background-position-x: 400%;
         }
     }
