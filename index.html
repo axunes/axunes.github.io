@@ -1,171 +1,171 @@
 <html>
 <head>
 <style>
-    body{
-        background: #222422;
-        margin: 0;
-    }
-    #site > #container{
-        margin: auto;
-        width: 75%;
-        font: 30px serif;
-        color: #fff;
-        background: #fff1;
-        padding: 40px;
-    }
+	body{
+		background: #222422;
+		margin: 0;
+	}
+	#site > #container{
+		margin: auto;
+		width: 75%;
+		font: 30px serif;
+		color: #fff;
+		background: #fff1;
+		padding: 40px;
+	}
 
-    #site > #top{
-        width: 100%;
-        height: 100px;
-        background:  linear-gradient(#0000, #0008 30%, #0f0312 100%), url('stars.png') 32px/32px, url('stars.png') 64px/64px, linear-gradient(#000f, #000f);
-        animation: top-bg-scroll 20s linear infinite;
+	#site > #top{
+		width: 100%;
+		height: 100px;
+		background:  linear-gradient(#0000, #0008 30%, #0f0312 100%), url('stars.png') 32px/32px, url('stars.png') 64px/64px, linear-gradient(#000f, #000f);
+		animation: top-bg-scroll 20s linear infinite;
 
-        
+		
 
-        overflow:hidden;
-        box-shadow: #a7f 0 0 20px;
-    }
+		overflow:hidden;
+		box-shadow: #a7f 0 0 20px;
+	}
 
-    @keyframes top-bg-scroll {
-        0%{
-            background-position: 0, 0px 0px, 16px 0px, 0;
-        }
-        to{
-            background-position: 0, 0 64px, 16px 128px, 0;
-        }
-    }
+	@keyframes top-bg-scroll {
+		0%{
+			background-position: 0, 0px 0px, 16px 0px, 0;
+		}
+		to{
+			background-position: 0, 0 64px, 16px 128px, 0;
+		}
+	}
 
-    #site > #top > #logo{
-        height: 100%;
-        image-rendering: auto;
-        float:left;
-    }
+	#site > #top > #logo{
+		height: 100%;
+		image-rendering: auto;
+		float:left;
+	}
 
-    #site > #top > #character{
-        height: 100%;
-        float: right;
-        image-rendering: auto;
-    }
+	#site > #top > #character{
+		height: 100%;
+		float: right;
+		image-rendering: auto;
+	}
 
-    .box{
-        background: repeating-linear-gradient(45deg, #333, #333 2.5%, #555 2.5%, #555 5%) 0/200% 200%;
-        animation: lines-scroll 4s linear infinite;
-        display: block;
+	.box{
+		background: repeating-linear-gradient(45deg, #333, #333 2.5%, #555 2.5%, #555 5%) 0/200% 200%;
+		animation: lines-scroll 4s linear infinite;
+		display: block;
 
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        /*
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        */
-    }
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		/*
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		*/
+	}
 
-    @keyframes lines-scroll {
-        to{
-        background-position-x: 100%;
-        }
-    }
+	@keyframes lines-scroll {
+		to{
+		background-position-x: 100%;
+		}
+	}
 
-    .box[data-title]::after{
-        opacity: 0%;
-        content: attr(data-title);
-        background: #555a;
-        position: absolute;
-        transition: 0.2s;
-        transform: translateY(100%);
-        z-index: 1;
-    }
+	.box[data-title]::after{
+		opacity: 0%;
+		content: attr(data-title);
+		background: #555a;
+		position: absolute;
+		transition: 0.2s;
+		transform: translateY(100%);
+		z-index: 1;
+	}
 
-    .box[data-title]:hover:after{
-        opacity: 100%;
-        transform: translateY(50%);
-    }
-
-
-    .box > .box_back{
-        background: #789;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        transition: 0.2s;
-        position: absolute;
-    }
-    
-    .box:hover > .box_back{
-        width: 90%;
-        height: 90%;
-        margin: 5%;
-    }
-
-    .box > .box_icon{
-        width: 70%;
-        height: 70%;
-        margin: 15%;
-        opacity: 20%;
-        transition: .2s;
-        position: absolute;
-    }
+	.box[data-title]:hover:after{
+		opacity: 100%;
+		transform: translateY(50%);
+	}
 
 
-    .box:hover > .box_icon{
-        width: 80%;
-        height: 80%;
-        margin: 10%;
-        
-        opacity: 75%;
-    }
+	.box > .box_back{
+		background: #789;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		transition: 0.2s;
+		position: absolute;
+	}
+	
+	.box:hover > .box_back{
+		width: 90%;
+		height: 90%;
+		margin: 5%;
+	}
 
-    .box > .box_back:after{
-        content: '';
+	.box > .box_icon{
+		width: 70%;
+		height: 70%;
+		margin: 15%;
+		opacity: 20%;
+		transition: .2s;
+		position: absolute;
+	}
 
-        background: linear-gradient(90deg,
-        hsl(0, 100%, 75%),
-        hsl(72, 100%, 75%),
-        hsl(144, 100%, 75%),
-        hsl(216, 100%, 75%),
-        hsl(288, 100%, 75%),
-        hsl(360, 100%, 75%)
-        ) 0 / 400%;
-        
-        animation: rainbow-scroll 5s linear infinite;
-        width: 100%;
-        height: 100%;
-        opacity: 0%;
-        margin: 0;
-        transition: 0.2s;
-        position: absolute;
-        mix-blend-mode: overlay;
 
-    }
+	.box:hover > .box_icon{
+		width: 80%;
+		height: 80%;
+		margin: 10%;
+		
+		opacity: 75%;
+	}
 
-    @keyframes rainbow-scroll {
-        from {
-            background-position-x: 0%;
-        }
-        to {
-            background-position-x: 400%;
-        }
-    }
+	.box > .box_back:after{
+		content: '';
 
-    .box:hover > .box_back:after{
-        opacity: 100%;
+		background: linear-gradient(90deg,
+		hsl(0, 100%, 75%),
+		hsl(72, 100%, 75%),
+		hsl(144, 100%, 75%),
+		hsl(216, 100%, 75%),
+		hsl(288, 100%, 75%),
+		hsl(360, 100%, 75%)
+		) 0 / 400%;
+		
+		animation: rainbow-scroll 5s linear infinite;
+		width: 100%;
+		height: 100%;
+		opacity: 0%;
+		margin: 0;
+		transition: 0.2s;
+		position: absolute;
+		mix-blend-mode: overlay;
 
-    }
+	}
 
-    .four_boxes{
-        margin: auto;
-        width: 400px;
-        height: 400px;
-        
-        background: #223;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        
-        grid-auto-rows: minmax(100px, auto);
-    }
+	@keyframes rainbow-scroll {
+		from {
+			background-position-x: 0%;
+		}
+		to {
+			background-position-x: 400%;
+		}
+	}
+
+	.box:hover > .box_back:after{
+		opacity: 100%;
+
+	}
+
+	.four_boxes{
+		margin: auto;
+		width: 400px;
+		height: 400px;
+		
+		background: #223;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		
+		grid-auto-rows: minmax(100px, auto);
+	}
 
 
 </style>
@@ -175,40 +175,40 @@
 <div id="site">
 
 <div id="top">
-    <img id="logo" src="logo.svg"></img>
-    <img id="character" src="character.webp"></img>
+	<img id="logo" src="logo.svg"></img>
+	<img id="character" src="character.webp"></img>
 </div>
 
 
 <div id="container">
-    <p>testi</p>
+	<p>testi</p>
 
-    <div class="four_boxes">
+	<div class="four_boxes">
 
-    <a class="box" data-title="Code" href="code/">
-        
-        <div class="box_back"></div>
-        <img class="box_icon" src="code.svg">
-    </a>
+	<a class="box" data-title="Code" href="code/">
+		
+		<div class="box_back"></div>
+		<img class="box_icon" src="code.svg">
+	</a>
 
-    <a class="box" data-title="Music" href="music/">
-            <div class="box_back"></div>
-            <img class="box_icon" src="music.svg">
-    </a>
+	<a class="box" data-title="Music" href="music/">
+			<div class="box_back"></div>
+			<img class="box_icon" src="music.svg">
+	</a>
 
-    <a class="box" data-title="Art" href="art/">
-        <div class="box_back"></div>
-        <img class="box_icon" src="art.svg">
-    </a>
+	<a class="box" data-title="Art" href="art/">
+		<div class="box_back"></div>
+		<img class="box_icon" src="art.svg">
+	</a>
 
-    <a class="box" data-title="Other" href="other/">
-        <div class="box_back"></div>
-        <img class="box_icon" src="other.svg">
-    </a>
+	<a class="box" data-title="Other" href="other/">
+		<div class="box_back"></div>
+		<img class="box_icon" src="other.svg">
+	</a>
 
-    
+	
 
-    </div>
+	</div>
 
 </div>
 
