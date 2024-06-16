@@ -1,0 +1,28 @@
+[
+	{
+		"title": "B.P.D.S.",
+		"path": "bpds",
+		"source_filetype": "zip",
+		"date": "2014-09-01",
+		"description": "it's a song I suppose"
+	},
+	{
+		"path": "lulobi",
+		"source_filetype": "fms",
+		"date": "2014-09-02",
+		"description": "it's a song I suppose"
+	},
+	{
+		"path": "strabbycake",
+		"source_filetype": "zip",
+		"date": "2016-09-01",
+		"description": "it's an ssos song I suppose"
+	},
+	{
+		"path": "welldone",
+		"source_filetype": "zip",
+		"render": true,
+		"date": "2022-04-15",
+		"description": "I like this one a lot"
+	}
+]

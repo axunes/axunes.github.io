@@ -1,0 +1,45 @@
+body{
+	background: #222422;
+	margin: 0;
+}
+#site > #container{
+	margin: auto;
+	width: 75%;
+	font: 30px serif;
+	color: #fff;
+	background: #fff1;
+	padding: 40px;
+}
+
+#site > #top{
+	width: 100%;
+	height: 100px;
+	background:  linear-gradient(#0000, #0008 30%, #0f0312 100%), url('stars.png') 32px/32px, url('stars.png') 64px/64px, linear-gradient(#000f, #000f);
+	animation: top-bg-scroll 20s linear infinite;
+
+	
+
+	overflow:hidden;
+	box-shadow: #a7f 0 0 20px;
+}
+
+@keyframes top-bg-scroll {
+	0%{
+		background-position: 0, 0px 0px, 16px 0px, 0;
+	}
+	to{
+		background-position: 0, 0 64px, 16px 128px, 0;
+	}
+}
+
+#site > #top > #logo{
+	height: 100%;
+	image-rendering: auto;
+	float:left;
+}
+
+#site > #top > #character{
+	height: 100%;
+	float: right;
+	image-rendering: auto;
+}

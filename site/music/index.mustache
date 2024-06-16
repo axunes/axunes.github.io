@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>music ♫</title>
+		<link rel="stylesheet" href="/assets/style.css">
+	</head>
+	<body>
+		<div id="site">
+			<div id="top">
+				<img id="logo" src="/assets/logo.svg"/>
+				<img id="character" src="/assets/character.webp"/>
+			</div>
+			
+			<div id="container">
+					{{#entries}}
+					<h1>{{year}}</h1>
+					<div>
+						{{#entries}}
+						<div>
+							{{#title}}
+							<h2>{{.}}</h2>
+							{{/title}}
+							{{^title}}
+							<h2>no title :p</h2>
+							{{/title}}
+						</div>
+						<div>
+							downloads:
+							<br>
+							{{#source_filetype}}
+							<a href="files/{{path}}/source.{{.}}">source.{{.}}</a>
+							{{/source_filetype}}
+							{{^source_filetype}}
+							no source :(
+							{{/source_filetype}}
+							<br>
+							{{#render}}
+							<a href="files/{{path}}/render.mp3">render.mp3</a>
+							{{/render}}
+							{{^render}}
+							no render :(
+							{{/render}}
+						</div>
+						{{/entries}}
+					</div>
+					{{/entries}}
+			</div>
+		</div>
+	</body>
+</html>
