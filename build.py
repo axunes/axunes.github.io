@@ -17,6 +17,7 @@ shutil.copyfile("site/404.html", "dist/404.html")
 shutil.copyfile("site/CNAME", "dist/CNAME")
 
 shutil.copytree("site/assets", "dist/assets")
+shutil.copytree("site/.well-known/", "dist/.well-known/")
 
 with open("site/music/index.mustache", "r") as file:
 	music_template = file.read()
